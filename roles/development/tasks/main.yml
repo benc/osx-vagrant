@@ -1,0 +1,20 @@
+---
+- include: bootstrap.yml
+
+- name: Install rbenv
+  homebrew: name={{item}} state=present
+  with_items:
+    - rbenv
+    - ruby-build
+    - ruby-install
+
+- name: Install rubies
+  command: rbenv install {{ item }} --keep
+  args:
+    creates: "{{ansible_env.HOME}}/.rbenv/versions/{{ item }}"
+  with_items:
+    - 1.9.3-p484
+    - 2.2.2
+  environment:
+    PATH: "/usr/local/bin:{{ ansible_env.PATH }}"
+    CC: /usr/bin/gcc

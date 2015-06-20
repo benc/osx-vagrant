@@ -1,0 +1,11 @@
+---
+- name: Install XCode command line tools
+  shell: xcode-select --install
+  args:
+    creates: /usr/bin/gcc
+  sudo: true
+
+- name: Install homebrew
+  shell: ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" </dev/null
+  args:
+    creates: /usr/local/bin/brew
