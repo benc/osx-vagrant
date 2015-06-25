@@ -2,4 +2,9 @@
 - hosts: all
   sudo: false
   roles:
-    - role: development
+    - role: bootstrap
+    - role: java
+    - role: nodejs
+    - role: ruby
+    # - role: mongodb
+    # - role: postgres

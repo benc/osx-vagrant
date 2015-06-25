@@ -1,6 +1,4 @@
 ---
-- include: bootstrap.yml
-
 - name: Install rbenv
   homebrew: name={{item}} state=present
   with_items:
@@ -18,3 +16,8 @@
   environment:
     PATH: "/usr/local/bin:{{ ansible_env.PATH }}"
     CC: /usr/bin/gcc
+
+- name: Set default ruby
+  command: rbenv global 2.2.2
+  environment:
+    PATH: "/usr/local/bin:{{ ansible_env.PATH }}"

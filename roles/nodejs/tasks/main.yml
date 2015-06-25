@@ -1,0 +1,13 @@
+---
+- name: Install node
+  homebrew: name=node state=present
+
+- name: Install node packages
+  npm: name={{item}} global=yes
+  with_items:
+    - karma-cli
+    - protractor
+    - gulp
+    - bower
+  environment:
+    PATH: "/usr/local/bin:{{ ansible_env.PATH }}"
