@@ -1,0 +1,91 @@
+---
+- name: Tap thoughtbot/formulae
+  homebrew_tap: tap=thoughtbot/formulae state=present
+
+- name: Install fish & rcm
+  homebrew: name={{item}} state=present
+  with_items:
+    - fish
+    - rcm
+
+- name: Setup user
+  debug: msg=TODO
+
+- name: Setup oh my fish
+  debug: msg=TODO
+
+- name: Setup dotfiles
+  debug: msg=TODO
+
+- name: Install cli packages
+  homebrew: name={{item}} state=present
+  with_items:
+    - readline
+    - wget
+    - the_silver_searcher
+    - coreutils
+    - git
+    - watch
+    - exiftool
+    - youtube-dl
+
+- name: Install tooling
+  homebrew_cask: name={{item}} state=present
+  with_items:
+    - 1password
+    - adobe-reader
+    - alfred
+    - arq
+    - asepsis
+    - atom
+    - bartender
+    - bbedit
+    - bee
+    - beyond-compare
+    - cloak
+    - curio
+    - daisydisk
+    - dash
+    - debookee
+    - dropbox
+    - fantastical
+    - firefox
+    - fission
+    - flux
+    - google-chrome
+    - hipchat
+    - ibank
+    - instacast
+    - intellij-idea
+    - iterm2
+    - knox
+    - little-snitch
+    - macupdate-desktop
+    - macvim
+    - mailmate
+    - moom
+    - omnifocus
+    - omnigraffle
+    - omnioutliner
+    - omnipresence
+    - onyx
+    - pacifist
+    - pgadmin3
+    - shimo
+    - skype
+    - superduper
+    - teamviewer
+    - textexpander
+    - totals
+    - tower
+    - transmit
+    - vagrant
+    - vagrant-manager
+    - vmware-fusion
+    - xscope
+
+- name: Configure Dropbox
+  debug: msg=TODO
+
+- name: Restore settings from Dropbox
+  debug: msg=TODO mackup restore

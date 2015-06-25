@@ -3,7 +3,7 @@
   sudo: false
   roles:
     - role: bootstrap
-    - role: cli
+    - role: workstation
     - role: java
     - role: nodejs
     - role: ruby

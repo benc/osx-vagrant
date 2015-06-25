@@ -10,7 +10,7 @@
   args:
     creates: /usr/local/bin/brew
 
-- name: Tap homebrew cask
+- name: Tap caskroom/cask
   homebrew_tap: tap=caskroom/cask state=present
 
 - name: Install homebrew cask
