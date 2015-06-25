@@ -87,5 +87,10 @@
 - name: Configure Dropbox
   debug: msg=TODO
 
+- name: Install mackup
+  homebrew: name={{item}} state=present
+  with_items:
+    - mackup
+    
 - name: Restore settings from Dropbox
   debug: msg=TODO mackup restore
