@@ -1,0 +1,5 @@
+---
+- name: Install mongo
+  homebrew: name=mongodb state=present
+
+# TODO link launchagent

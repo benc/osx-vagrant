@@ -3,8 +3,10 @@
   sudo: false
   roles:
     - role: bootstrap
+    - role: cli
     - role: java
     - role: nodejs
     - role: ruby
-    # - role: mongodb
+    - role: mongodb
+    - role: elasticsearch
     # - role: postgres

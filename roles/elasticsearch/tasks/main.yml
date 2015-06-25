@@ -1,0 +1,5 @@
+---
+- name: Install elasticsearch
+  homebrew: name=elasticsearch state=present
+
+# TODO link launchagent
