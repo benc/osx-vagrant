@@ -86,6 +86,10 @@
     - xquartz
   ignore_errors: true
 
+- name: Configure Alfred to pick up homebrew cask stuff
+  command: brew cask link alfred
+  environment:
+    PATH: "/usr/local/bin:{{ ansible_env.PATH }}"
 
 - name: Configure Dropbox
   debug: msg=TODO
