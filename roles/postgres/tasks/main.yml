@@ -1,0 +1,3 @@
+---
+- name: Install postgres
+  homebrew: name=postgresql state=present

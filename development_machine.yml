@@ -9,4 +9,4 @@
     - role: ruby
     - role: mongodb
     - role: elasticsearch
-    # - role: postgres
+    - role: postgres
