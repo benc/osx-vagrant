@@ -1,6 +1,7 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "osx-yosemite"
   config.ssh.insert_key = false
+  config.ssh.forward_agent = true
 
   # Build blog platform
   config.vm.provider :vmware_fusion do |provider, override|
