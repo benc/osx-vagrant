@@ -83,6 +83,7 @@
     - vagrant-manager
     - vmware-fusion
     - xscope
+    - xquartz
 
 - name: Configure Dropbox
   debug: msg=TODO
@@ -91,6 +92,6 @@
   homebrew: name={{item}} state=present
   with_items:
     - mackup
-    
+
 - name: Restore settings from Dropbox
   debug: msg=TODO mackup restore
