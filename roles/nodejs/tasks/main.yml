@@ -7,7 +7,7 @@
   with_items:
     - karma-cli
     - protractor
-    - gulp
-    - bower
+    - typescript
+    - tsd
   environment:
     PATH: "/usr/local/bin:{{ ansible_env.PATH }}"
