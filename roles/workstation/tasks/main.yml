@@ -84,6 +84,8 @@
     - vmware-fusion
     - xscope
     - xquartz
+  ignore_errors: true
+
 
 - name: Configure Dropbox
   debug: msg=TODO
