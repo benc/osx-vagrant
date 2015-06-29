@@ -15,3 +15,7 @@
 
 - name: Install homebrew cask
   homebrew: name=brew-cask state=present
+
+- name: Set timezone to Europe/Brussels
+  command: systemsetup -settimezone 'Europe/Brussels'
+  sudo: true
